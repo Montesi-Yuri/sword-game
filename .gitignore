@@ -1,0 +1,32 @@
+# Unreal Engine generated/cache folders
+Binaries/
+Build/
+DerivedDataCache/
+Intermediate/
+Saved/
+
+# Visual Studio
+.vs/
+*.sln
+*.slnx
+*.suo
+*.opensdf
+*.sdf
+*.VC.db
+*.VC.opendb
+
+# Rider / other IDEs
+.idea/
+*.iws
+
+# Compiled sources
+*.obj
+*.o
+*.dll
+*.pdb
+*.exe
+
+# UE crash reports / misc
+CrashReportClient/
+*.upk.bak
+*.umap.bak
