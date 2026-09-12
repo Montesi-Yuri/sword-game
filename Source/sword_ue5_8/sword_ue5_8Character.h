@@ -12,6 +12,7 @@ class USkeletalMeshComponent;
 class UCameraComponent;
 class UInputAction;
 struct FInputActionValue;
+class Usword_ue5_8MeleeCombatComponent;
 
 DECLARE_LOG_CATEGORY_EXTERN(LogTemplateCharacter, Log, All);
 
@@ -30,6 +31,10 @@ class Asword_ue5_8Character : public ACharacter
 	/** First person camera */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
 	UCameraComponent* FirstPersonCameraComponent;
+
+	/** Drives the free-path Attack/Block Duel mechanic -- see sword_ue5_8MeleeCombatComponent.h */
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
+	Usword_ue5_8MeleeCombatComponent* MeleeCombatComponent;
 
 protected:
 	/** Jump Input Action */
@@ -89,5 +94,11 @@ public:
 	UCameraComponent* GetFirstPersonCameraComponent() const
 	{
 		return FirstPersonCameraComponent;
+	}
+
+	/** Returns the melee combat component **/
+	Usword_ue5_8MeleeCombatComponent* GetMeleeCombatComponent() const
+	{
+		return MeleeCombatComponent;
 	}
 };
