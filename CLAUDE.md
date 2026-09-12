@@ -33,4 +33,14 @@ Unreal Engine 5.8 C++ project. It started from Epic's stock First Person Templat
 
 ## Source control
 
-Not yet a git repo (git is planned). When initializing git, exclude `Binaries/`, `Intermediate/`, `Saved/`, `DerivedDataCache/`, and `.vs/` — all currently untracked build/cache output sitting at the project root.
+Git repo on `main`, remote `Montesi-Yuri/sword-game` on GitHub. `.gitignore` excludes `Binaries/`, `Build/`, `Intermediate/`, `Saved/`, `DerivedDataCache/`, and `.vs/` — all build/cache output at the project root.
+
+## Agent skills
+
+### Issue tracker
+
+Issues tracked in GitHub Issues (Montesi-Yuri/sword-game), via the `gh` CLI. See `docs/agents/issue-tracker.md`.
+
+### Domain docs
+
+Single-context layout: `CONTEXT.md` + `docs/adr/` at the repo root, created lazily as terms/decisions resolve. See `docs/agents/domain.md`.
