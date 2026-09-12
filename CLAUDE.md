@@ -44,3 +44,7 @@ Issues tracked in GitHub Issues (Montesi-Yuri/sword-game), via the `gh` CLI. See
 ### Domain docs
 
 Single-context layout: `CONTEXT.md` + `docs/adr/` at the repo root, created lazily as terms/decisions resolve. See `docs/agents/domain.md`.
+
+### Editor MCP tooling (VibeUE & UnrealClaude)
+
+Two source plugins under `Plugins/` (VibeUE, UnrealClaude — cloned from GitHub, not submodules) expose the editor to Claude Code via MCP: VibeUE expands Unreal 5.8's native MCP server for Blueprint/material/UMG/asset editing, UnrealClaude adds an in-editor chat panel plus its own MCP bridge for viewport screenshots and actor moves. UnrealClaude ships targeting UE 5.7 and needed a small patch to compile on 5.8 (an `FJsonObject::Values` key-type change) — see `docs/agents/mcp-tooling.md` for the patch, connection setup, and a large carried-over list of VibeUE/UnrealClaude gotchas (PIE editing limits, UMG binding quirks, crash triggers, etc.).
